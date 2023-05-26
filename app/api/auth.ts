@@ -4,6 +4,8 @@ import md5 from "spark-md5";
 import { ACCESS_CODE_PREFIX } from "../constant";
 import { OPENAI_URL } from "./common";
 
+export const runtime = 'edge';
+
 function getIP(req: NextRequest) {
   let ip = req.ip ?? req.headers.get("x-real-ip");
   const forwardedFor = req.headers.get("x-forwarded-for");
